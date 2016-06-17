@@ -1,0 +1,125 @@
+body{
+    background-color:#191919;
+    color:white;
+}
+
+/*header*/
+#header{
+    text-align:center;
+    
+}
+#header h2{
+    font-family: Roboto, cursive;
+    font-weight:800;
+    font-size: 50px;    
+}
+
+#header span{
+    font-family:Pacifico;
+}
+
+/*=======================
+MAIN SECTION
+=========================*/
+
+#search-container{
+    height: 100%;
+    transition-duration:3s;
+    padding: 25px;
+    text-align: center;
+}
+
+#search-form{
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    width: 300px;
+    height: 40px;
+    margin-left: 0;
+    padding: 0;
+    border: 5px solid #898171;
+    border-radius: 100px;
+    -webkit-transition: all 0.25s ease 0.3s;
+    -moz-transition: all 0.25s ease 0.3s;
+    transition: all 0.25s ease 0.3s;
+    cursor: pointer;
+}
+
+#search-form #input-text-container{
+    width: 95%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 38px;
+    opacity: 0.9;
+    background-color: transparent;
+    color: white;
+    -webkit-transition: opacity 0.25s ease;
+    -moz-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
+    border-radius:20px;
+    border: 0px solid #898171;
+}
+
+#random-icon{
+    margin:25px;
+    display:block;
+}
+
+#random-icon a:hover{
+    
+}
+/*=======================
+FOOTER
+=========================*/
+
+.primary-footer{
+    padding-bottom: 44px;
+    padding-top: 44px;
+}
+.primary-footer small{
+    float:left;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top:25px;
+}
+
+/*mercury link*/
+.primary-footer small a{
+    
+}
+
+.primary-footer small a:hover{
+    
+}
+.container{
+  margin: 0 auto;
+  width: 960px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/*Clearfix*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+/*footer navigation*/
+.nav {
+  text-align: right;
+}
+.nav li {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: top;
+}
+.nav li:last-child {
+  margin-right: 0;
+}
