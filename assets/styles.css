@@ -24,78 +24,124 @@ MAIN SECTION
 
 #search-container{
     height: 100%;
-    transition-duration:3s;
-    padding: 25px;
+    transition-duration:2s;
+    padding: 10px;
     text-align: center;
 }
 
-#search-form{
+#search-container a{
+    text-decoration:none;
+    color:white;
+}
+
+#input-text-container{
     position: relative;
-    display: inline-block;
-    z-index: 1;
+    font-size: 18px;
+    line-height: 38px;
+    opacity: 0.9;
     width: 300px;
     height: 40px;
     margin-left: 0;
     padding: 0;
-    border: 5px solid #898171;
-    border-radius: 100px;
-    -webkit-transition: all 0.25s ease 0.3s;
-    -moz-transition: all 0.25s ease 0.3s;
-    transition: all 0.25s ease 0.3s;
-    cursor: pointer;
-}
-
-#search-form #input-text-container{
-    width: 95%;
-    height: 100%;
-    font-size: 18px;
-    line-height: 38px;
-    opacity: 0.9;
+    z-index: 1; 
+    display: inline-block;
     background-color: transparent;
-    color: white;
+    color:white;
+    text-align-last: center;
+    cursor:pointer;
     -webkit-transition: opacity 0.25s ease;
     -moz-transition: opacity 0.25s ease;
     transition: opacity 0.25s ease;
-    border-radius:20px;
-    border: 0px solid #898171;
+    border-radius: 100px;
+    border: 5px solid #898171;
 }
 
 #random-icon{
     margin:25px;
-    display:block;
+    display:inline-block;
+    cursor:pointer;
 }
 
 #random-icon a:hover{
+    cursor:pointer;
+}
+
+#wiki-results{
+    padding:0 50px 50px 50px;
+}
+
+/*wiki search results container*/
+#search-results{
+    padding:10px;
+}
+
+/*sub sections containing each wiki search result, title and snippet*/
+.sub-section{
+    padding: 20px;
+    margin: 10px;
+    background-color:white;
+    border-radius: 15px;
+}
+
+/*title of the wiki article*/
+.wiki-title{
+    font-size:30px;
+    display:block;
+    font-family:Raleway, sans-serif;
+}
+
+.wiki-title a{
+    text-decoration:none;
+    color:black;
+}
     
+.wiki-title a:hover{
+    text-decoration:none;
+    color: blue;
+}
+
+/*snippet for the wiki search*/
+.wiki-snippet{
+    font-family:cursive;
+    display:block;
+    line-height: 25px;
+    color:black;
+}
+
+/*share wiki search*/
+.share-wiki-search{
+    margin-left:75%;
+    text-align:right;
+    color:black;
 }
 /*=======================
 FOOTER
 =========================*/
 
 .primary-footer{
-    padding-bottom: 44px;
-    padding-top: 44px;
+    background-color:teal;
 }
 .primary-footer small{
     float:left;
     font-weight: 500;
     font-size: 16px;
-    margin-top:25px;
+    margin:25px;
+    line-height: 35px;
 }
 
 /*mercury link*/
 .primary-footer small a{
-    
+    text-decoration: none;
+    color:black;
 }
 
 .primary-footer small a:hover{
-    
+    color:burlywood;
 }
+
 .container{
   margin: 0 auto;
-  width: 960px;
-  padding-left: 30px;
-  padding-right: 30px;
+  width: 100%;
 }
 
 /*Clearfix*/
@@ -113,13 +159,27 @@ FOOTER
 }
 /*footer navigation*/
 .nav {
-  text-align: right;
+    text-align: right;
+    float: right;
 }
+
 .nav li {
   display: inline-block;
   margin: 0 10px;
   vertical-align: top;
 }
+
+/*social media links*/
+.nav li a{
+    color:white;
+    text-decoration:none;
+}
+
+.nav li a:hover{
+    color:aqua;
+
+}
+
 .nav li:last-child {
-  margin-right: 0;
+  margin-right: 10px;
 }

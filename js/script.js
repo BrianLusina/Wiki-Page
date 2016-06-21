@@ -1,58 +1,41 @@
+//https://en.wikipedia.org/wiki/Special:Random.
+//https://www.mediawiki.org/wiki/API:Main_page.
 $(document).ready(function(){
     
-    $('.social .small-icons').hover(function(){
+    $('.social').hover(function(){
       $(this).effect('bounce',{times:3},300);  
-    });
+    });   
     
+    $('#input-text-container').keyup(function(){
+        var inputTxt = $('#input-text-container'); //store typed in value in variable
+        var value = inputTxt.val() //get the value of the input text
+        var url = 'https://en.wikipedia.org/w/api.php?' + 'action=query&list=search&format=json&srprop=snippet' + '&srsearch=' + value + '&callback=?';
+        
+        /*perform wiki search*/
+        function wikiSearch(text){
+            var searchWiki = "<div id='search-results'>";
+            $.each(text.query.search, function(index, item){
+                searchWiki += '<div class="sub-section">' ;
+                searchWiki += '<ul><li class="wiki-title">';
+                searchWiki += '<a href="https://en.wikipedia.org/wiki/' + item.title + '" target="_blank">' + item.title + '</li></a>';
+                searchWiki += '<li class="wiki-snippet">' + item.snippet + '...</li>'
+                searchWiki += '</ul>';
+                searchWiki += '</div>';
+            });//end each search
+            searchWiki += '</div>';
+            
+            //populate the results in the wiki-results
+            $('#wiki-results').html(searchWiki); 
+        }//end function wikiSearch
+    // get json
+    $.getJSON(url, wikiSearch);
+    });
 });
 
-
-
-var app = angular.module('WikiApp', ['ngAnimate']);
-app.controller('MainCtrl', function($scope, $http, $timeout) {
-  var form = $('form');
-  var close = $('.eks');
-  var input = $('input');
-  var search = $("#search");
-  var help = $("#help");
-  
-  $scope.results = [];
-
-  close.on('click', function() {
-    form.toggleClass('open');
-    
-    if (!form.hasClass('open') && $scope.searchTxt !== '' && typeof $scope.searchTxt !== 'undefined') {
-	    search.toggleClass('fullHeight')
-      help.toggleClass('hide');
-      $scope.searchTxt = '';
-    } 
-    $scope.results = [];
-    $scope.$apply();
-  })
-
-  input.on('transitionend webkitTransitionEnd oTransitionEnd', function() {
-    if (form.hasClass('open')) {
-      input.focus();
-    } else {
-      return;
-    }
-  })
-
-  $scope.search = function() {
-    $scope.results = [];
-    help.addClass('hide');
-    search.removeClass('fullHeight');
-    var title = input.val();
-    var api = 'https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=';
-    var cb = '&callback=JSON_CALLBACK';
-    var page = 'https://en.wikipedia.org/?curid=';
-    
-    $http.jsonp(api + title + cb)
-    .success(function(data) {
-      var results = data.query.pages;
-      angular.forEach(results, function(v,k)  {
-        $scope.results.push({title: v.title, body: v.extract, page: page + v.pageid})
-      })
-    });
-  }
-});
+/*share wiki results*/
+/*<div class="share-wiki-find" >
+    <a href=" " target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+    <a href=" " target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+    <a href=" " target="_blank"><i class="fa fa-github fa-2x"></i></a>
+    <a href=" " target="_blank"><i class="fa fa-reddit fa-2x"></i></a>
+  </div>*/

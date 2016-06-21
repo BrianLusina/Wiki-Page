@@ -9,7 +9,7 @@
         <link rel= "stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css"/>
         
         <!--Google Fonts-->
-        <link href='https://fonts.googleapis.com/css?family=Lobster|Pacifico|Shadows+Into+Light|Roboto' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lobster|Pacifico|Shadows+Into+Light|Roboto|Raleway' rel='stylesheet' type='text/css'>
         
         <!--JQUERY-->
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -31,18 +31,20 @@
         <section>
             <!--Search container-->
             <div id="search-container">
-                <form id="search-form">
-                    <input type="text" placeholder="Wiki search..." id="input-text-container" >
-                </form>
+                
+                <!--input text-->
+                <input type="text" placeholder="Wiki search..." id="input-text-container">
+                
                 <br>
-                <i id="random-icon" class="fa fa-random fa-2x">
-                    <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"></a>
-                </i>
+                <!--Random search-->
+                <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
+                    <i id="random-icon" class="fa fa-random fa-2x" hovertext="Click for a random article"></i>
+                </a>
             </div> 
             
             <!--Wiki results-->
             <div id="wiki-results">
-            
+                
             </div>
         </section>
         
