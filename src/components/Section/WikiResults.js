@@ -7,7 +7,9 @@ export default class WikiResults extends React.Component{
 
   render(){
     return(
-
+      <div>
+        <p>Wiki results</p>
+      </div>
     )
   }
 }

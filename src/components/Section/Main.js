@@ -12,7 +12,6 @@ export default class Main extends React.Component{
       <section>
           <div id="search-container">
             <Search />
-            <br>
             <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
                 <i id="random-icon" className="fa fa-random fa-2x" hovertext="Click for a random article"></i>
             </a>
