@@ -23,5 +23,16 @@
   "bugs": {
     "url": "https://github.com/BrianLusina/Wiki-Page/issues"
   },
-  "homepage": "https://github.com/BrianLusina/Wiki-Page#readme"
+  "homepage": "https://github.com/BrianLusina/Wiki-Page#readme",
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-loader": "^6.2.8",
+    "css-loader": "^0.26.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
 }
