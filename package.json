@@ -1,0 +1,27 @@
+{
+  "name": "mini-wiki",
+  "version": "2.0.0",
+  "description": "Small search engine for wikipedia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianLusina/Wiki-Page.git"
+  },
+  "keywords": [
+    "Mini",
+    "wiki",
+    "wiki",
+    "wiki-page",
+    "react",
+    "wiki"
+  ],
+  "author": "The Lusina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianLusina/Wiki-Page/issues"
+  },
+  "homepage": "https://github.com/BrianLusina/Wiki-Page#readme"
+}
