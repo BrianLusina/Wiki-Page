@@ -6,7 +6,7 @@ export default class Main extends React.Component{
     super();
 
     this.state = {
-      inputText = ""
+      searchValue : ""
     }
 
     this._handleKeyPress = this._handleKeyPress.bind(this);
@@ -22,7 +22,7 @@ export default class Main extends React.Component{
             </a>
           </div>
           <div id="wiki-results">
-            <WikiResults />
+            <WikiResults searchValue={this.state.searchValue}/>
           </div>
       </section>
     )
@@ -31,6 +31,6 @@ export default class Main extends React.Component{
   /**Handle the input text*/
   _handleKeyPress(event){
     event.preventDefault();
-    console.log(event.key);
+    this.setState({searchValue: event.key});
   }
 }
