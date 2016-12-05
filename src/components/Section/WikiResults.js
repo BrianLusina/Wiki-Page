@@ -26,13 +26,11 @@ export default class WikiResults extends React.Component{
   // performs wiki search
   _wikiSearch(){
     let data = this.props.searchValue;
-    jQuery.ajax({
-      method:"GET",
-      url: 'https://en.wikipedia.org/w/api.php?' + 'action=query&list=search&format=json&srprop=snippet' + '&srsearch=' + this.props.searchValue + '&callback=?',
-      success:(response) => {
-        console.log(response);
-      }
-    });
+    var url = 'https://en.wikipedia.org/w/api.php?' + 'action=query&list=search&format=json&srprop=snippet' + '&srsearch=' + this.props.searchValue + '&callback=?';
+    jQuery.getJSON(url, function(data){
+      console.log(data);
+    }
+  );
 
       // var searchWiki = "<div id='search-results'>";
       // searchWiki += '<div class="sub-section">' ;
