@@ -19,25 +19,21 @@ export default class WikiResults extends React.Component{
     const searchResults = this.state.results.map((item, indx) => {
         return(
           <div key={indx} className="sub-section">
-              <div className="wiki-title">
+            <ul>
+              <li className="wiki-title">
                 <a href="https://en.wikipedia.org/wiki/{item.title}" target="_blank">
                   {item.title}
                 </a>
-                <div className="wiki-snippet"> {item.snippet} </div>
-              </div>
+              </li>
+              <li className="wiki-snippet">
+                {item.snippet}
+              </li>
+            </ul>
           </div>
         )
     });
 
-    return(
-      <div id="wiki-results">
-        <div id='search-results'>
-          <ul>
-            {searchResults}
-          </ul>
-        </div>
-      </div>
-    )
+    return({searchResults})
   }
 
   // performs wiki search
