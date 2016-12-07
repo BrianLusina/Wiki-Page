@@ -14,9 +14,25 @@ export default class WikiResults extends React.Component{
   }
 
   render(){
+    const searchResults = this.state.results.map((item, indx) => {
+      return
+        <div className="sub-section">
+            <div className="wiki-title">
+              <a href="https://en.wikipedia.org/wiki/{item}" target="_blank">
+                {item}
+              </a>
+              <div className="wiki-snippet"> {item} </div>
+            </div>
+        </div>
+      });
+
     return(
       <div id="wiki-results">
-        {this.state.results}
+        <div id='search-results'>
+          <ul>
+            {searchResults}
+          </ul>
+        </div>
       </div>
     )
   }
@@ -25,19 +41,10 @@ export default class WikiResults extends React.Component{
   _wikiSearch(){
     var url = 'https://en.wikipedia.org/w/api.php?' + 'action=query&list=search&format=json&srprop=snippet' + '&srsearch=' + this.props.searchValue + '&callback=?';
     jQuery.getJSON(url, function(data){
-      var searchWiki = "<div id='search-results'>";
       jQuery.each(data, function(index, item){
-        searchWiki += '<div class="sub-section">' ;
-        searchWiki += '<ul><li class="wiki-title">';
-        searchWiki += '<a href="https://en.wikipedia.org/wiki/' + data.title + '" target="_blank">' + data.title + '</li></a>';
-        searchWiki += '<li class="wiki-snippet">' + data.snippet + '...</li>'
-        searchWiki += '</ul>';
-        searchWiki += '</div>';
-        searchWiki += '</div>';
+        console.log("Result data: ", item);        
       });
-      searchWiki += '</div>';
       this.setState({results: searchWiki});
-      console.log("Result data: ",this.state.results);
     }.bind(this)
   );
 }
