@@ -18,10 +18,10 @@ export default class WikiResults extends React.Component{
       return
         <div className="sub-section">
             <div className="wiki-title">
-              <a href="https://en.wikipedia.org/wiki/{item}" target="_blank">
-                {item}
+              <a href="https://en.wikipedia.org/wiki/{item.title}" target="_blank">
+                {item.title}
               </a>
-              <div className="wiki-snippet"> {item} </div>
+              <div className="wiki-snippet"> {item.snippet} </div>
             </div>
         </div>
       });
@@ -41,11 +41,11 @@ export default class WikiResults extends React.Component{
   _wikiSearch(){
     var url = 'https://en.wikipedia.org/w/api.php?' + 'action=query&list=search&format=json&srprop=snippet' + '&srsearch=' + this.props.searchValue + '&callback=?';
     jQuery.getJSON(url, function(data){
-      jQuery.each(data, function(index, item){
-        console.log("Result data: ", item);        
-      });
-      this.setState({results: searchWiki});
-    }.bind(this)
+      jQuery.each(data, function(index, items){
+        this.setState({results:items});
+      }.bind(this)
+    );
+    }
   );
 }
 
