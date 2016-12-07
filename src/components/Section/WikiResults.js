@@ -40,13 +40,12 @@ export default class WikiResults extends React.Component{
   // performs wiki search
   _wikiSearch(){
     var url = 'https://en.wikipedia.org/w/api.php?' + 'action=query&list=search&format=json&srprop=snippet' + '&srsearch=' + this.props.searchValue + '&callback=?';
-    jQuery.getJSON(url, function(data){
-      jQuery.each(data, function(index, items){
+    jQuery.getJSON(url, (data) =>{
+      jQuery.each(data, (index, items) =>{
         this.setState({results:items});
-      }.bind(this)
-    );
+      });
     }
-  );
+  ).bind(this);
 }
 
 }
