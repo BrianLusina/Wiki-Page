@@ -7,6 +7,8 @@ export default class WikiResults extends React.Component{
     this.state = {
       results: []
     }
+
+    this._wikiSearch = this._wikiSearch.bind(this);
   }
 
   componentWillReceiveProps(){
@@ -40,12 +42,11 @@ export default class WikiResults extends React.Component{
   // performs wiki search
   _wikiSearch(){
     var url = 'https://en.wikipedia.org/w/api.php?' + 'action=query&list=search&format=json&srprop=snippet' + '&srsearch=' + this.props.searchValue + '&callback=?';
-    jQuery.getJSON(url, (data) =>{
-      jQuery.each(data, (index, items) =>{
+    jQuery.getJSON(url, (data) => {
+      jQuery.each(data, (index, items) => {
         this.setState({results:items});
       });
-    }
-  ).bind(this);
+    });
 }
 
 }
