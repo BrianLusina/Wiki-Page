@@ -33,7 +33,11 @@ export default class WikiResults extends React.Component{
         )
     });
 
-    return({searchResults})
+    return(
+      <div id='search-results'>
+        {searchResults}
+      </div>
+      )
   }
 
   // performs wiki search

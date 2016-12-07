@@ -22,9 +22,7 @@ export default class Main extends React.Component{
             </a>
           </div>
           <div id="wiki-results">
-            <div id='search-results'>
               <WikiResults searchValue={this.state.searchValue}/>
-            </div>
           </div>
       </section>
     )
