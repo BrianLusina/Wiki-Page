@@ -31,7 +31,9 @@ export default class Main extends React.Component{
   /**Handle the input text*/
   _handleKeyPress(event){
     event.preventDefault();
-    this.setState({searchValue: event.key});
-
+    //evaluates only alphanumeric characters
+    if (event.which <= 90 && event.which >= 48){
+      this.setState({searchValue: event.key});
+    }
   }
 }
