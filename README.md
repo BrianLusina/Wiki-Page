@@ -6,7 +6,8 @@ The site allows a user to search Wikipedia entries in a search box and see the r
 
 There are two versions for the app 1 made in ReactJS and another in plain jQuery:
 
-Apps can be found here
+Apps can be found here:
+
 1. [jQuery version](http://mini-wiki.bitballoon.com/)
 2. [ReactJS version](https://miniwikiview.herokuapp.com/)
 
