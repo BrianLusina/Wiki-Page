@@ -42,7 +42,8 @@ export default class WikiResults extends React.Component{
 
   // performs wiki search
   _wikiSearch(){
-    var url = 'https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&siprop=snippet' + '&srsearch=' + this.props.searchValue + '&callback=?';
+
+    var url = 'https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&siprop=snippet&srsearch=' + this.props.searchText + '&callback=?';
     jQuery.getJSON(url, (data) => {
       this.setState({results:data.query.search});
     });
@@ -51,5 +52,6 @@ export default class WikiResults extends React.Component{
 }
 
 WikiResults.propTypes = {
-  searchValue : React.PropTypes.string.isRequired
+  searchValue : React.PropTypes.string.isRequired,
+  searchText : React.PropTypes.string.isRequired
 }

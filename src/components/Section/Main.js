@@ -6,7 +6,8 @@ export default class Main extends React.Component{
     super();
 
     this.state = {
-      searchValue : ""
+      searchValue : "",
+      searchText: ""
     }
 
     this._handleKeyPress = this._handleKeyPress.bind(this);
@@ -16,7 +17,10 @@ export default class Main extends React.Component{
     return(
       <section>
           <div id="search-container">
-            <input type="text" placeholder="Wiki search..." id="input-text-container" onKeyUp={this._handleKeyPress}/>
+            <input type="text" placeholder="Wiki search..." id="input-text-container"
+              ref={c => this._searchText = c}
+              onKeyUp={this._handleKeyPress}
+              />
             <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
                 <i id="random-icon" className="fa fa-random fa-2x" hovertext="Click for a random article"></i>
             </a>
@@ -33,7 +37,10 @@ export default class Main extends React.Component{
     event.preventDefault();
     //evaluates only alphanumeric characters
     if (event.which <= 90 && event.which >= 48){
-      this.setState({searchValue: event.key});
+      this.setState({
+        searchValue: event.key,
+        searchText: this._searchText.value
+      });
     }
   }
 }
