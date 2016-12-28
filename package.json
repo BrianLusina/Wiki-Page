@@ -4,10 +4,12 @@
   "description": "Small search engine for wikipedia",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
-    "build-dev":"NODE_ENV=production webpack --config ./webpack.dev.config.js --progress --colors",
-    "start": "node app.js"
+    "build-dev": "NODE_ENV=production webpack --config ./webpack.dev.config.js --progress --colors",
+    "start": "node app.js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build&&gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -26,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/BrianLusina/Wiki-Page/issues"
   },
-  "homepage": "https://github.com/BrianLusina/Wiki-Page#readme",
+  "homepage": "https://brianlusina.github.oi/Wiki-Page",
   "dependencies": {
     "express": "^4.14.0",
     "react": "^15.4.1",
@@ -43,9 +45,11 @@
     "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.26.1",
     "file-loader": "^0.9.0",
+    "gh-pages": "^0.12.0",
     "html-webpack-plugin": "^2.24.1",
     "jquery": "^3.1.1",
     "node-css": "^0.1.0",
+    "react-scripts": "^0.8.4",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.3",

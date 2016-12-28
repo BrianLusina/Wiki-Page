@@ -1,6 +1,6 @@
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-    template:__dirname + "/index.html",
+    template:__dirname + "/build/index.html",
     filename: "index.html",
     inject:"body",
     title:"Mini Wiki",
@@ -15,8 +15,8 @@ module.exports = {
     entry: [__dirname + "/src/index.js", 'webpack-hot-middleware/client'],
     output:{
       filename: 'bundle.js',
-      publicPath: "/public/",
-      path: path.join(__dirname + 'public')
+      publicPath: "/build/",
+      path: path.join(__dirname + 'build')
     },
 
     plugins: [
