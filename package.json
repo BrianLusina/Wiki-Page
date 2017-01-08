@@ -6,7 +6,7 @@
   "description": "Small search engine for wikipedia",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BrianLusina/Wiki-Page.git"
+    "url": "git+https://github.com/BrianLusina/MiniWiki.git"
   },
   "keywords": [
     "Mini",
@@ -19,9 +19,8 @@
   "author": "The Lusina",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BrianLusina/Wiki-Page/issues"
+    "url": "https://github.com/BrianLusina/MiniWiki/issues"
   },
-  "homepage": "https://brianlusina.github.io/Wiki-Page/",
   "dependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
