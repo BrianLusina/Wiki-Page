@@ -22,8 +22,8 @@
     "url": "https://github.com/BrianLusina/MiniWiki/issues"
   },
   "dependencies": {
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
   },
   "devDependencies": {
     "babel": "^6.5.2",
