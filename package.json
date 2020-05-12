@@ -42,7 +42,7 @@
     "node-css": "^0.1.0",
     "react-scripts": "^0.8.4",
     "style-loader": "^0.23.1",
-    "url-loader": "^0.5.7",
+    "url-loader": "^0.6.2",
     "webpack": "^1.13.3",
     "webpack-combine-loaders": "^2.0.3",
     "webpack-dev-middleware": "^1.8.4",
