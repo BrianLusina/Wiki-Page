@@ -40,7 +40,7 @@
     "html-webpack-plugin": "^2.24.1",
     "jquery": "^3.5.0",
     "node-css": "^0.1.0",
-    "react-scripts": "^0.8.4",
+    "react-scripts": "^0.9.5",
     "style-loader": "^0.23.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.3",
