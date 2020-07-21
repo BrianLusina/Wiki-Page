@@ -1,0 +1,36 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.16.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - react-scripts > react-dev-utils > inquirer > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > extract-text-webpack-plugin > async > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > webpack > async > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-dynamic-import-node > babel-types > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-transform-class-properties > babel-template > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-dynamic-import-node > babel-template > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > webpack-dev-server > portfinder > async > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-transform-class-properties > babel-template > babel-types > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-dynamic-import-node > babel-template > babel-types > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-transform-regenerator > regenerator-transform > babel-types > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-transform-class-properties > babel-template > babel-traverse > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-dynamic-import-node > babel-template > babel-traverse > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-transform-class-properties > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-dynamic-import-node > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
+    - react-scripts > babel-preset-react-app > babel-preset-env > babel-plugin-transform-regenerator > regenerator-transform > babel-types > lodash:
+        patched: '2020-07-21T05:26:55.309Z'
